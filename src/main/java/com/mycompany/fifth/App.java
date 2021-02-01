@@ -8,8 +8,9 @@ public class App
     static Dictionary dictionary = new Dictionary();
     static Set<String> returnList = new HashSet<String>();
 
-    public static void main(String word) {
+    public static void main(String[] args) {
 
+        String word = args[0];
         Set<String> masterPerm = new HashSet<String>();
         // Creating array of string length 
         char[] c = new char[word.length()]; 
@@ -37,7 +38,7 @@ public class App
         System.out.println("\nPermutations for " + word + " are: \n" + returnList);
     }
 
-    private static String selectLetters(String s, char[] c) {
+    public static String selectLetters(String s, char[] c) {
         String comb = "";
         int len = s.length();
         for(int i=0;i<s.length();i++) {
